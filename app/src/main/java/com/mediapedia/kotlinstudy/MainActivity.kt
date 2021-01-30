@@ -1,15 +1,20 @@
 package com.mediapedia.kotlinstudy
 
+import android.content.ComponentName
 import android.content.Intent
+import android.content.ServiceConnection
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.IBinder
+import android.util.Log
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         tv_first.setOnClickListener{
             //一.Intent启动方式
 //            var intent = Intent(this,SecondActivity::class.java)
@@ -34,4 +39,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }
+
